@@ -1,3 +1,42 @@
+# Python cache
 __pycache__/
 *.pyc
+
+# Virtual environments
+.env
+.venv
+venv/
+env/
+ENV/
+
+# IDE folders
 .idea/
+.vscode/
+
+# Logs
+*.log
+
+# Database
+*.sqlite3
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+build/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Testing cache
+.pytest_cache/
+.coverage
+
+# Type checkers
+.mypy_cache/
+
+# Temp files
+*.tmp
