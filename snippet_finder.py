@@ -7,14 +7,16 @@ def load_snippets():
     folder = os.path.join(os.path.dirname(__file__), "code_snippets")
     docs = {}
 
+    if not os.path.exists(folder):
+        print("code_snippets folder not found!")
+        return {}
+
     for filename in os.listdir(folder):
         path = os.path.join(folder, filename)
 
-        # ✅ Skip folders like __pycache__
         if not os.path.isfile(path):
             continue
 
-        # ✅ Only read Python files
         if not filename.endswith(".py"):
             continue
 
@@ -24,7 +26,6 @@ def load_snippets():
         docs[filename] = filename.replace("_", " ") + " " + content
 
     return docs
-
 
 # ===== TOKENIZE =====
 def tokenize(text):
